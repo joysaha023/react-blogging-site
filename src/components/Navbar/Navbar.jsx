@@ -1,28 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+    const [theme, setTheme] = useState('light')
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme)
+        const localTheme = localStorage.getItem('theme')
+        document.querySelector('html').setAttribute('data-theme', localTheme)
+    }, [theme])
+
+
+    const handleToggle = (e) => {
+        if(e.target.checked){
+            setTheme('synthwave')
+        }else{
+            setTheme('light')
+        }
+    }
+    
+
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">BistroBlog</a>
+          <a className="btn btn-ghost gap-0 text-secondary hover:bg-white normal-case text-2xl">Bistro<span className="text-primary">Blog</span></a>
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
-            <li>
+            <li className="font-bold text-primary">
               <a>Home</a>
             </li>
-            <li>
+            <li className="font-bold">
               <a>Blogs</a>
             </li>
-            <li>
+            <li className="font-bold">
               <a>Bookmarks</a>
             </li>
           </ul>
           <label className="cursor-pointer grid place-items-center">
             <input
+              onChange={handleToggle}
               type="checkbox"
-              value="synthwave"
+              
               className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
             />
             <svg
