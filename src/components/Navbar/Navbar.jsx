@@ -22,7 +22,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
+      <div className="navbar bg-base-100 shadow-lg px-4 sm:px-8 fixed z-10">
         <div className="flex-1">
           <Link to="/" className="btn btn-ghost gap-0 text-secondary  normal-case text-2xl">Bistro<span className="text-primary">Blog</span></Link>
         </div>
