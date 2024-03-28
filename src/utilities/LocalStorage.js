@@ -12,3 +12,8 @@ export const saveDataToLocalStorage = (blog) => {
         alert("successfully added");
     }
 };
+
+export const getDataFromLocal = () => {
+    const getDefaultData = JSON.parse(localStorage.getItem("blog")) || [];
+    return getDefaultData;
+}

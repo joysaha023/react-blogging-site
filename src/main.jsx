@@ -11,6 +11,7 @@ import Blogs from './pages/Blogs.jsx'
 import Bookmarks from './pages/Bookmarks.jsx'
 import MainLayout from './layouts/MainLayout.jsx'
 import BlogDetails from './components/BlogDetails/BlogDetails.jsx'
+import BookMark from './components/BookMark/BookMark.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/bookmarks',
-        element: <Bookmarks></Bookmarks>
+        element: <BookMark></BookMark>
       }
     ]
   },
