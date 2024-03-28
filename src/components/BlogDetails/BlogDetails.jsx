@@ -1,6 +1,7 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import SingleBlogDe from "../SingleBlogDe";
+import { saveDataToLocalStorage } from "../../utilities/LocalStorage";
 
 const BlogDetails = () => {
   const blogs = useLoaderData();
@@ -8,7 +9,7 @@ const BlogDetails = () => {
   const blog = blogs.find((blog) => blog.id == id);
 
  const handleBookmark = () => {
-    console.log("click")
+    saveDataToLocalStorage(blog);
  }
 
 
