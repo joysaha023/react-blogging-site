@@ -7,7 +7,7 @@ const BlogCard = ({ blog }) => {
   return (
     <div>
       
-      <Link to="/blog/${id}"  className="card h-full w-full bg-base-100 shadow-xl">
+      <Link to={`/blog/${id}`}  className="card h-full w-full bg-base-100 shadow-xl">
         <figure className="h-full m-6">
           <img
             src={cover_image || errImage}
@@ -16,7 +16,7 @@ const BlogCard = ({ blog }) => {
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
+          <h2 className="card-title">{title}</h2>
           <p>If a dog chews shoes whose shoes does he choose?</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Buy Now</button>
