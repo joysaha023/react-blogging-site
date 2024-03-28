@@ -8,7 +8,7 @@ const Bookmarks = ({ BlogDa }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{BlogDa.title}</h2>
+        <h2 className="card-title">{BlogDa.title}</h2> 
         <p>{BlogDa.description}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-error text-white">Delete</button>
